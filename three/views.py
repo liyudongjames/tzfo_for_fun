@@ -29,5 +29,5 @@ def add_test_three(request, a, b):
 
 def home_page(request):
     string = u'试一试使用{{}}来导入字符串'
-    return render(request, 'home_page.html', {'string',string})
+    return render(request, 'home_page.html', {'string': string})
 
