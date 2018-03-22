@@ -20,7 +20,14 @@ def add_test_two(request, a, b):
     return HttpResponse(str(c))
 
 
+# 利用reverse逆向解析url 也不知道写的对不对
 def add_test_three(request, a, b):
     reverse('add3', args=(a, b))
     c = int(a) + int(b)
     return HttpResponse(str(c))
+
+
+def home_page(request):
+    string = u'试一试使用{{}}来导入字符串'
+    return render(request, 'home_page.html', {'string',string})
+
