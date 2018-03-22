@@ -20,4 +20,5 @@ from three import views as three_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', three_view.index),
+    path('add/', three_view.add_test)
 ]
