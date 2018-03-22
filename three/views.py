@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse(u'欢迎光临11111')
+    return render(request, 'home.html')
 
 
 def add_test(request):
