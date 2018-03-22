@@ -12,3 +12,8 @@ def add_test(request):
     b = request.GET.get('b', 0)
     c = int(a) + int(b)
     return HttpResponse(str(c))
+
+
+def add_test_two(request, a, b):
+    c = int(a) + int(b)
+    return HttpResponse(str(c))
