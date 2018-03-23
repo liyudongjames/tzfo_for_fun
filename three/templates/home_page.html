@@ -5,9 +5,9 @@
     <title>Welcome to my home</title>
 </head>
 <body>
-<a>{{ string }}/n</a>
+<a>{{ info_dict.string }}/n</a>
 <a>教程列表：
-    {% for i in TutorialList %}
+    {% for i in info_dict.TutorialList %}
         {{ i }}
     {% endfor %}</a>
 </body>
