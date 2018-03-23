@@ -30,5 +30,5 @@ def add_test_three(request, a, b):
 def home_page(request):
     string = u'试一试使用{{}}来导入字符串'
     TutorialList = ["HTML", "CSS", "jQuery", "Python", "Django"]
-    return render(request, 'home_page.html', {'string': string}, {'TutorialList': TutorialList})
+    return render(request, 'home_page.html', {'TutorialList': TutorialList})
 
