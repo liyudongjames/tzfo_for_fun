@@ -27,6 +27,13 @@ def add_test_three(request, a, b):
     return HttpResponse(str(c))
 
 
+def multiply_practice(request):
+    a = request.GET.get('a', 0)
+    b = request.GET.get('b', 0)
+    c = int(a) * int(b)
+    return HttpResponse(str(c))
+
+
 def home_page(request):
     string = u'试一试使用{{}}来导入字符串'
     TutorialList = ["HTML", "CSS", "jQuery", "Python", "Django"]
@@ -38,9 +45,4 @@ def test_get(request):
     return render(request, 'firstAppend.html')
 
 
-def add(request):
-    a = request.GET['a']
-    b = request.GET['b']
-    a = int(a)
-    b = int(b)
-    return HttpResponse(str(a + b))
+
