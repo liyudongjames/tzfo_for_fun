@@ -11,7 +11,7 @@ def index(request):
 def add_test(request):
     a = request.GET.get('a', 0)
     b = request.GET.get('b', 0)
-    c = int(a) + int(b)
+    c = int(a) + int(b) + 10
     return HttpResponse(str(c))
 
 
