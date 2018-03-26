@@ -33,3 +33,14 @@ def home_page(request):
     info_dict = {'string': string, 'TutorialList': TutorialList}
     return render(request, 'home_page.html', {'info_dict': info_dict})
 
+
+def test_get(request):
+    return render(request, 'index.html')
+
+
+def add(request):
+    a = request.GET['a']
+    b = request.GET['b']
+    a = int(a)
+    b = int(b)
+    return HttpResponse(str(a + b))

@@ -25,4 +25,5 @@ urlpatterns = [
     path('new_add/<int:a>/<int:b>/', three_view.add_test_two, name='add2'),
     path('newed_add/<int:a>/<int:b>/', three_view.add_test_three, name='add3'),
     path('home_page/', three_view.home_page),
+    path('append/', three_view.test_get),
 ]
