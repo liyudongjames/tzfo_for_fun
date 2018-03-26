@@ -35,7 +35,7 @@ def home_page(request):
 
 
 def test_get(request):
-    return render(request, 'index.html')
+    return render(request, 'firstAppend.html')
 
 
 def add(request):
