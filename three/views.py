@@ -59,3 +59,6 @@ def form_practice(request):
         form = AddForm()
     return render(request, 'form_add.html', {'form': form})
 
+
+def testing_css(request):
+    return render(request, 'testing_css.html')
