@@ -27,5 +27,6 @@ urlpatterns = [
     path('home_page/', three_view.home_page),
     path('append/', three_view.test_get),
     path('multiply/', three_view.multiply_practice, name='multiply'),
-    path('form_post/', three_view.form_practice)
+    path('form_post/', three_view.form_practice),
+    path('testing_css', three_view.testing_css),
 ]
