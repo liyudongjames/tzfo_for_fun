@@ -62,3 +62,7 @@ def form_practice(request):
 
 def testing_css(request):
     return render(request, 'testing_css.html')
+
+
+def testing_video(request):
+    return render(request, 'video_test.html')
