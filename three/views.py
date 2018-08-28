@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.urls import reverse
 from .forms import AddForm
+from three.models import Person
+from django.core import serializers
 
 
 # Create your views here.
@@ -66,3 +68,24 @@ def testing_css(request):
 
 def testing_video(request):
     return render(request, 'video_test.html')
+
+
+def testing_div(request):
+    return render(request, 'div_demo.html')
+
+
+def testing_information(request):
+    return render(request, 'information_test.html')
+
+
+def get_person(request):
+    data = serializers.serialize("json", Person.objects.all())
+    return HttpResponse(str(data))
+
+
+def add_person(request):
+    name = request.GET.get('name', '')
+    age = request.GET.get('age', 0)
+    Person.objects.create(name=name, age=age)
+    return HttpResponse(str('添加成功'))
+
